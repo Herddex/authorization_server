@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  security:
+    oauth2:
+      authorizationserver:
+        client:
+          api_server:
+            registration:
+              client-id: "client"
+              client-secret: "{noop}secret"
+              client-authentication-methods:
+                - "client_secret_basic"
+              authorization-grant-types:
+                - "client_credentials"
